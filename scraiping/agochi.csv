@@ -1,4 +1,28 @@
-num,name,address,area,genre,coordinates
-1,つぼ八ツインハープ店,"[<p>〒078-8373<br/>
-旭川市旭神3条5丁目2‐9</p>, <p><a class=""btn-tel"" href=""tel:0166-65-8995""><i class=""wp-svg-phone phone""></i>0166-65-8995</a></p>, <p>月〜木・日曜日：17時00分〜23時00分<br/>
-金・土曜日・祝日前：17時00分〜0時00分</p>, <p>年中無休</p>]",https://agochi.jp/area/kagura-kaguraoka-kyokujin/,https://agochi.jp/genre/izakaya/,"43.7332904,142.3887079"
+num,name,area,genre,address,tel,business_hours,holiday,coordinates
+1,つぼ八ツインハープ店,https://agochi.jp/area/kagura-kaguraoka-kyokujin/,https://agochi.jp/genre/izakaya/,"〒078-8373
+旭川市旭神3条5丁目2‐9",0166-65-8995,"月〜木・日曜日：17時00分〜23時00分
+金・土曜日・祝日前：17時00分〜0時00分",年中無休,"43.7332904,142.3887079"
+2,炭火焼肉すみ家,https://agochi.jp/area/toukou/,https://agochi.jp/genre/yakiniku/,"〒078-8343
+旭川市東光3条1丁目4‐14",0166-64-6565,17時00分〜23時00分,"月曜日
+※月曜日が祝日、もしくは祝日前日の場合は営業します","43.7528686,142.3906997"
+3,居酒屋 独尊,https://agochi.jp/area/chuoh/,https://agochi.jp/genre/izakaya/,"〒070-0033
+旭川市3条通6丁目右4号
+うえ田ビル2階",0166-23-1217,17時00分〜0時00分,月曜日,"43.7680766,142.3576869"
+4,大番寿司,https://agochi.jp/area/chuoh/,https://agochi.jp/genre/japanese_food/,"〒070-0033
+旭川市3条通6丁目右10号",0166-23-2500,17時00分〜0時00分,日曜日,"43.7678196,142.3584539"
+5,弐乃雪屋,https://agochi.jp/area/chuoh/,https://agochi.jp/genre/japanese_food/,"〒070-0033
+旭川市3条通8丁目1293‐1",0166-24-3240,18時00分〜22時00分,日曜日・祝祭日,"43.7670749,142.3609642"
+6,蕎麦 雪屋,https://agochi.jp/area/chuoh/,https://agochi.jp/genre/soba-udon/,"〒070-0033
+旭川市3条通7丁目
+谷内写真館ビル1F",0166-23-0011,"11時30分〜14時00分
+18時00分〜0時00分",日曜日・祝祭日,"43.7677526,142.3588243"
+7,味咲屋,https://agochi.jp/area/chuoh/,https://agochi.jp/genre/soba-udon/,"〒070-0031
+旭川市1条通7丁目アッシュ内",ありません,10時15分〜19時45分,年中無休,"43.7659224,142.359074"
+8,ホワイトベースカフェ,https://agochi.jp/area/hokumon-midori-chikabumi/,https://agochi.jp/genre/curry/,"〒070-0825
+旭川市北門町9丁目2654‐11",0166-64-6069,11時00分〜15時30分,不定休,"43.785565,142.347206"
+9,鮨天ぷら 松もり,https://agochi.jp/area/hokumon-midori-chikabumi/,https://agochi.jp/genre/japanese_food/,"〒070-0823
+旭川市緑町16丁目3059‐6
+みどりハイツ1F102号",0166-76-1972,17時00分〜22時00分,月曜日,"43.7871289,142.3332268"
+10,自由奔放 炭焼き部,https://agochi.jp/area/toyooka-higasiasahikawa/,https://agochi.jp/genre/izakaya/,"〒078-8242
+旭川市豊岡12条1丁目1‐8
+スプレイビル1F",0166-73-6225,17時00分〜0時00分,不定休,"43.7700274,142.3904213"
