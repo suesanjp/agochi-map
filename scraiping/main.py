@@ -13,6 +13,8 @@ for i in range(5):
     # 店舗情報を取得
     name = soup.h2.string
 
+    area = soup.select("a.cat-area")[0]["title"]
+    genre = soup.select("a.cat-genre")[0]["title"]
 
     soup_table = soup.table
     address = soup_table.select_one("tr:nth-child(1) > td > p ").text
@@ -25,6 +27,7 @@ for i in range(5):
     iframe_page = requests.get(ifarme_src).text
     coordinates = re.search(r"\d{2}\.\d{4,20}\,\d{3}\.\d{4,20}", iframe_page).group()
 
+    print(name, area, genre, address, tel, business_hours, holiday, coordinates)
 
     num += 1
     time.sleep(0.5)
