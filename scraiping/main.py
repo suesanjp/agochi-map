@@ -4,8 +4,9 @@ import re
 import time
 
 num = 1
+dict = {}
 
-for i in range(5):
+for i in range(2):
     url = "https://agochi.jp/introduce/a" + str(num) + "/"
     page = requests.get(url)
     soup = BeautifulSoup(page.text, "html.parser")
@@ -27,7 +28,17 @@ for i in range(5):
     iframe_page = requests.get(ifarme_src).text
     coordinates = re.search(r"\d{2}\.\d{4,20}\,\d{3}\.\d{4,20}", iframe_page).group()
 
-    print(name, area, genre, address, tel, business_hours, holiday, coordinates)
+    # 辞書に追加
+    dict["name" + str(num)] = name
+    dict["area" + str(num)] = area
+    dict["genre" + str(num)] = genre
+    dict["address" + str(num)] = address
+    dict["tel" + str(num)] = tel
+    dict["business_hours" + str(num)] = business_hours
+    dict["holiday" + str(num)] = holiday
+    dict["coordinates" + str(num)] = coordinates
+    print(dict)
+
 
     num += 1
     time.sleep(0.5)
