@@ -5,6 +5,7 @@ import time
 import json
 
 num = 1
+list = []
 dict = {}
 
 for i in range(2):
@@ -30,22 +31,21 @@ for i in range(2):
     coordinates = re.search(r"\d{2}\.\d{4,20}\,\d{3}\.\d{4,20}", iframe_page).group()
 
     # 辞書に追加
-    dict["name" + str(num)] = name
-    dict["area" + str(num)] = area
-    dict["genre" + str(num)] = genre
-    dict["address" + str(num)] = address
-    dict["tel" + str(num)] = tel
-    dict["business_hours" + str(num)] = business_hours
-    dict["holiday" + str(num)] = holiday
-    dict["coordinates" + str(num)] = coordinates
-    print(dict)
 
-    # 辞書オブジェクトをstr型で取得して出力
-    print(json.dumps(dict, ensure_ascii=False, indent=2))
+    # Todo １つのリストの中にそれぞれ辞書が入るようにする
+    dict["name"] = name
+    dict["area"] = area
+    dict["genre"] = genre
+    dict["address"] = address
+    dict["tel"] = tel
+    dict["business_hours"] = business_hours
+    dict["holiday"] = holiday
+    dict["coordinates"] = coordinates
+    list.append(dict)
 
-    # 辞書オブジェクトをJSONファイルへ出力
+    # リストをJSONファイルへ出力
     with open("mydata.json", mode="wt", encoding="utf-8") as file:
-        json.dump(dict, file, ensure_ascii=False, indent=2)
+        json.dump(list, file, ensure_ascii=False, indent=2)
 
     num += 1
     time.sleep(0.5)
