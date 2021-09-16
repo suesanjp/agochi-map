@@ -5,10 +5,9 @@ import time
 import json
 
 num = 1
-list = []
-dict = {}
+shop_list = []
 
-for i in range(2):
+for i in range(3):
     url = "https://agochi.jp/introduce/a" + str(num) + "/"
     page = requests.get(url)
     soup = BeautifulSoup(page.text, "html.parser")
@@ -31,21 +30,20 @@ for i in range(2):
     coordinates = re.search(r"\d{2}\.\d{4,20}\,\d{3}\.\d{4,20}", iframe_page).group()
 
     # 辞書に追加
-
-    # Todo １つのリストの中にそれぞれ辞書が入るようにする
-    dict["name"] = name
-    dict["area"] = area
-    dict["genre"] = genre
-    dict["address"] = address
-    dict["tel"] = tel
-    dict["business_hours"] = business_hours
-    dict["holiday"] = holiday
-    dict["coordinates"] = coordinates
-    list.append(dict)
-
-    # リストをJSONファイルへ出力
-    with open("mydata.json", mode="wt", encoding="utf-8") as file:
-        json.dump(list, file, ensure_ascii=False, indent=2)
+    shop_data = {}
+    shop_data["name"] = name
+    shop_data["area"] = area
+    shop_data["genre"] = genre
+    shop_data["address"] = address
+    shop_data["tel"] = tel
+    shop_data["business_hours"] = business_hours
+    shop_data["holiday"] = holiday
+    shop_data["coordinates"] = coordinates
+    shop_list.append(shop_data)
 
     num += 1
     time.sleep(0.5)
+
+# リストをJSONファイルへ出力
+with open("mydata.json", mode="wt", encoding="utf-8") as file:
+    json.dump(shop_list, file, ensure_ascii=False, indent=2)
