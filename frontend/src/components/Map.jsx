@@ -1,17 +1,10 @@
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import LocationMarker from "./Location";
+import mydata from "../mydata.json";
 
-const PopupItem = "つぼ八ツインハープ店";
-/* <br />
-〒078-8373旭川市旭神3条5丁目2‐9
-<br />
-0166-65-8995
-<br />
-月〜木・日曜日：17時00分〜23時00分
-<br />
-金・土曜日・祝日前：17時00分〜0時00分
-<br />
-年中無休" */
+const num = 0;
+const name = mydata[num].name;
+// TODO intで緯度、経度それぞれjsonに出力するように
 
 const Map = () => {
   return (
@@ -25,7 +18,7 @@ const Map = () => {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={[43.7332904, 142.3887079]}>
-        <Popup>{PopupItem}</Popup>
+        <Popup>{name}</Popup>
       </Marker>
       <LocationMarker />
     </MapContainer>
