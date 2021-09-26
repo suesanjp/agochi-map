@@ -28,6 +28,9 @@ for i in range(3):
     ifarme_src = soup.find("iframe").get("src")
     iframe_page = requests.get(ifarme_src).text
     coordinates = re.search(r"\d{2}\.\d{4,20}\,\d{3}\.\d{4,20}", iframe_page).group()
+    split_coordinates = coordinates.split(",")
+    longitude = float(split_coordinates[0])
+    latitude = float(split_coordinates[1])
 
     # 辞書に追加
     shop_data = {}
@@ -38,7 +41,8 @@ for i in range(3):
     shop_data["tel"] = tel
     shop_data["business_hours"] = business_hours
     shop_data["holiday"] = holiday
-    shop_data["coordinates"] = coordinates
+    shop_data["longitude"] = longitude
+    shop_data["latitude"] = latitude
     shop_list.append(shop_data)
 
     num += 1
