@@ -44,10 +44,11 @@ for i in range(3):
     shop_data["longitude"] = longitude
     shop_data["latitude"] = latitude
     shop_list.append(shop_data)
+    print("a" + str(num))
 
     num += 1
     time.sleep(0.5)
 
 # リストをJSONファイルへ出力
-with open("mydata.json", mode="wt", encoding="utf-8") as file:
+with open("./frontend/src/mydata.json", mode="wt", encoding="utf-8") as file:
     json.dump(shop_list, file, ensure_ascii=False, indent=2)
